@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+<!-- Add the following namespace usages: -->
+@using DevExpress.AspNetCore
+@using DevExpress.DashboardWeb
+@using DevExpress.DashboardAspNetCore
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add bundled resources. -->
+    <link href="~/css/site.min.css" rel="stylesheet" />
+    <script src="~/js/site.min.js"></script>
+
+    <script>
+        function onInitializing(sender) {
+            // Localize the specified string at runtime (the "Export To" button's caption in the dashboard title):
+            DevExpress.Dashboard.ResourceManager.setLocalizationMessages({ "DashboardStringId.ActionExportTo": "Custom Text for Export Button" });
+
+            // Apply custom formatting for numbers and dates:
+            var json = { main: {} };
+            json["main"]["de"] = {
+                numbers: { "currencyFormats-numberSystem-latn": { standard: "C #,##0.00 ¤" } },
+                dates: { calendars: { gregorian: { dateTimeFormats: { availableFormats: { yMd: "dd MMM y" } } } } }
+            };
+            Globalize.load(json);
+        }
+
+        function onBeforeRender(sender) {
+            // Apply culture-specific formatting:
+            Globalize.locale("de");
+        }
+    </script>
+</head>
+<body>
+    <!-- Add the Web Dashboard with the "clientDashboardControl1" name to a View, specify its size. -->
+    <div style="position: absolute; left:0;top:0;right:0;bottom:0;">
+        @(Html.DevExpress().Dashboard("clientDashboardControl1")
+            .OnInitializing("onInitializing")
+            .OnBeforeRender("onBeforeRender")
+            .Height("100%")
+        )
+    </div>
+</body>
+</html>
