@@ -1,4 +1,4 @@
-# Title
+# Dashboard for ASP.NET Core Localization
 
 Text
 
