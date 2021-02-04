@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="New Dashboard" />
+  <DataSources>
+    <ObjectDataSource Name="ObjectDataSource" ComponentName="objectDataSource1">
+      <DataSource Type="ProductSales, DashboardLocalizationManualCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+      <DataMember>GetProductSales</DataMember>
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem2" Name="Source Data" DataSource="objectDataSource1">
+      <DataItems>
+        <Dimension DataMember="Category" DefaultId="DataItem1" />
+        <Dimension DataMember="Product" DefaultId="DataItem2" />
+        <Dimension DataMember="OrderID" DefaultId="DataItem0" />
+        <Measure DataMember="Sales" DefaultId="DataItem3">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+        <Dimension DataMember="OrderDate" DateTimeGroupInterval="None" DefaultId="DataItem4" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridMeasureColumn>
+          <Measure DefaultId="DataItem3" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem2" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
