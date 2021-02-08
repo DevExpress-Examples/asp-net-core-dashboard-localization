@@ -41,13 +41,13 @@ If you add Globalize npm packages and reference these scripts in the ASP.NET Cor
 
 ## Documentation
 
-- [ASP.NET Core Dashboard Control - Localization](https://docs.devexpress.com/Dashboard/402535/web-dashboard/aspnet-core-dashboard-control/localization)
+- [Localization for ASP.NET Core Dashboard Control](https://docs.devexpress.com/Dashboard/402535/web-dashboard/aspnet-core-dashboard-control/localization)
 
 ## More Examples
 
-- [ASP.NET MVC Dashboard Control - Localization]()
-- [ASP.NET Web Forms Dashboard Control - Localization]()
-- [Dashboard for Angular - Localization]()
-- [Dashboard for React - Localization]()
-- [Dashboard for Vue - Localization]()
-- [Dashboard Control for JavaScript Applications - Localization]()
+- [ASP.NET MVC Dashboard Control - Localization](https://github.com/DevExpress-Examples/asp-net-mvc-dashboard-localization)
+- [ASP.NET Web Forms Dashboard Control - Localization](https://github.com/DevExpress-Examples/asp-net-web-forms-dashboard-localization)
+- [Dashboard for Angular - Localization](https://github.com/DevExpress-Examples/angular-dashboard-localization)
+- [Dashboard for React - Localization](https://github.com/DevExpress-Examples/react-dashboard-localization)
+- [Dashboard for Vue - Localization](https://github.com/DevExpress-Examples/vue-dashboard-localization)
+- [Dashboard Control for JavaScript Applications - Localization](https://github.com/DevExpress-Examples/javascript-dashboard-localization)
