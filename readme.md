@@ -34,9 +34,9 @@ The **DashboardLocalizationCore** project uses _Intl_ to apply culture-specific 
 * [bundleconfig.json](./CS/DashboardLocalizationManualCore/bundleconfig.json)
 <!-- default file list end -->
 
-The **DashboardLocalizationManualCore** project shows how to use Globalize﻿ instead of Intl.
+The **DashboardLocalizationManualCore** project shows how to use Globalize instead of Intl.
 
-If you add Globalize npm packages and reference these scripts in the ASP.NET Core application, the ASP.NET Core Dashboard control will use Globalize﻿ to format dates, numbers, and currencies.
+If you add Globalize npm packages and reference these scripts in the ASP.NET Core application, the ASP.NET Core Dashboard control will use Globalize﻿ to format dates, numbers, and currencies. The project also shows how to apply custom formatting for numbers and dates.
 
 
 ## Documentation
