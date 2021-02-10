@@ -9,7 +9,7 @@ The example shows how to localize an ASP.NET Core Dashboard application:
 
 ## Example Structure
 
-The example contains two projects. Both projects localize the ASP.NET Core Dashboard control for the German market with the [predefined satellite assemblies](https://docs.devexpress.com/Dashboard/402535/web-dashboard/aspnet-core-dashboard-control/localization#add-predefined-satellite-assemblies). The difference between projects is a way used to [format dates, numbers, and currencies](https://docs.devexpress.com/Dashboard/402535#localize-dates-numbers-and-currencies).
+The example contains two projects that show how to use [predefined satellite assemblies](https://docs.devexpress.com/Dashboard/402535/web-dashboard/aspnet-core-dashboard-control/localization#add-predefined-satellite-assemblies) to localize the ASP.NET Core Dashboard control for the German market. Each project uses a different approach to [format dates, numbers, and currencies](https://docs.devexpress.com/Dashboard/402535#localize-dates-numbers-and-currencies).
 
 ### Intl
 
