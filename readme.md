@@ -1,4 +1,7 @@
 # Dashboard for ASP.NET Core - Localization
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/336051273/)**
+<!-- run online end -->
 
 The example shows how to localize an ASP.NET Core Dashboard application:
 
