@@ -37,10 +37,11 @@
     <!-- Add the Web Dashboard with the "clientDashboardControl1" name to a View, specify its size. -->
     <div style="position: absolute; left:0;top:0;right:0;bottom:0;">
         @(Html.DevExpress().Dashboard("clientDashboardControl1")
-            .OnInitializing("onInitializing")
-            .OnBeforeRender("onBeforeRender")
-            .Height("100%")
-        )
+		    .ControllerName("DefaultDashboard")
+			.OnInitializing("onInitializing")
+			.OnBeforeRender("onBeforeRender")
+			.Height("100%")
+		)
     </div>
 </body>
 </html>

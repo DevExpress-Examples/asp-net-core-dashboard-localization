@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace ASPNETCore30Dashboard {
     public class Startup {
@@ -24,17 +25,19 @@ namespace ASPNETCore30Dashboard {
             // Configures services to use the Web Dashboard Control.
             services
                 .AddDevExpressControls()
-                .AddControllersWithViews()
-                .AddDefaultDashboardController(configurator => {
-                    configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
+                .AddControllersWithViews();
+            services.AddScoped<DashboardConfigurator>((IServiceProvider serviceProvider) => {
+                DashboardConfigurator configurator = new DashboardConfigurator();
+                configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("App_Data/Dashboards").PhysicalPath));
 
-                    DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
-                    DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("ObjectDataSource", typeof(ProductSales));
-                    objDataSource.DataMember = "GetProductSales";
-                    dataSourceStorage.RegisterDataSource("objectDataSource", objDataSource.SaveToXml());
+                DataSourceInMemoryStorage dataSourceStorage = new DataSourceInMemoryStorage();
+                DashboardObjectDataSource objDataSource = new DashboardObjectDataSource("ObjectDataSource", typeof(ProductSales));
+                objDataSource.DataMember = "GetProductSales";
+                dataSourceStorage.RegisterDataSource("objectDataSource", objDataSource.SaveToXml());
 
-                    configurator.SetDataSourceStorage(dataSourceStorage);
-                });
+                configurator.SetDataSourceStorage(dataSourceStorage);
+                return configurator;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,7 +64,7 @@ namespace ASPNETCore30Dashboard {
             app.UseAuthorization();
             app.UseEndpoints(endpoints => {
                 // Maps the dashboard route.
-                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboards");
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboard", "DefaultDashboard");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
