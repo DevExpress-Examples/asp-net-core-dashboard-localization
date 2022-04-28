@@ -15,6 +15,7 @@
 
     <script>
         function onInitializing(sender) {
+            DevExpress.localization.locale('de');
             // Localize the specified string at runtime (the "Export To" button's caption in the dashboard title):
             DevExpress.Dashboard.ResourceManager.setLocalizationMessages({ "DashboardStringId.ActionExportTo": "Custom Text for Export Button" });
         }
