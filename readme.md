@@ -29,7 +29,7 @@ The example contains two projects that show how to use [predefined satellite ass
 <!-- default file list end -->
 
 
-The **DashboardLocalizationCore** project uses _Intl_ to apply culture-specific formatting. The Web Dashboard control supports and uses this API out of the box.
+The **DashboardLocalizationCore** project uses _Intl_ to apply culture-specific formatting. The Web Dashboard control supports and uses this API out of the box. Call the `DevExpress.localization.locale` method and pass the locale as a parameter: `DevExpress.localization.locale('de');`.
 
 
 ### Globalize
