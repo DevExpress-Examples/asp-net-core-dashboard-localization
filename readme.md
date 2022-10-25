@@ -21,8 +21,7 @@ The example contains two projects that show how to use [predefined satellite ass
 
 ### Intl
 
-<!-- default file list -->
-*Files to look at*:
+*Files to Review*:
 
 * [Index.cshtml](./CS/DashboardLocalizationCore/Views/Home/Index.cshtml)
 * [Startup.cs](./CS/DashboardLocalizationCore/Startup.cs)
@@ -34,8 +33,7 @@ The **DashboardLocalizationCore** project uses _Intl_ to apply culture-specific 
 
 ### Globalize
 
-<!-- default file list -->
-*Files to look at*:
+*Files to Review*:
 
 * [Index.cshtml](./CS/DashboardLocalizationManualCore/Views/Home/Index.cshtml)
 * [Startup.cs](./CS/DashboardLocalizationManualCore/Startup.cs)
