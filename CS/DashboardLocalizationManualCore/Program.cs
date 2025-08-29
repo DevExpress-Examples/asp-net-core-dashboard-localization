@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace ASPNETCore30Dashboard {
     public class Program {
         public static void Main(string[] args) {
+          DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(ProductSales));
             CreateHostBuilder(args).Build().Run();
         }
 
